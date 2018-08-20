@@ -6,7 +6,6 @@
       </swiper-slide>
       <div class="swiper-pagination"  slot="pagination"></div>
     </swiper>
-    <p>454555</p>
   </div>
 </template>
 
@@ -22,15 +21,15 @@ export default {
       swiperList: [
         {
           id: '001',
-          imgUrl: 'https://mgg.gzqqs.com/web/mgg-activity/product/817/爆品3@2x.png'
+          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1806/3c/c72a1ccd4d7b2202.jpg_750x200_b88bbab4.jpg'
         },
         {
           id: '002',
-          imgUrl: 'https://mgg.gzqqs.com/web/mgg-activity/product/817/爆品4@2x.png'
+          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1805/e8/14b75b1c81fbe702.jpg_750x200_e6d4f1f1.jpg'
         },
         {
           id: '003',
-          imgUrl: 'https://mgg.gzqqs.com/web/mgg-activity/product/817/爆品5@2x.png'
+          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1808/5e/514ce60160e62602.jpg_750x200_9b0074e2.jpg'
         }
       ]
     }
@@ -47,7 +46,7 @@ export default {
     width 100%
     height 0
     overflow hidden
-    padding-bottom 45.87% // h344 w750  344/750=0.4587
+    padding-bottom 26.25% // h344 w750  344/750=0.4587
     background-color #eee
     .swiper-img{
       width 100%
