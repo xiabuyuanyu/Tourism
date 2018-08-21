@@ -4,7 +4,7 @@
       <div>周末去哪儿</div>
     </div>
     <ul>
-      <li class='item border-bottom' v-for='item in recommendList' :key='item.id'>
+      <li class='item border-bottom' v-for='item in list' :key='item.id'>
         <div class='item-img-wrapper'>
           <img :src="item.imgUrl" alt="" class='item-img'/>
         </div>
@@ -20,29 +20,8 @@
 <script>
 export default {
   name: 'HomeWeekend',
-  data () {
-    return {
-      recommendList: [
-        {
-          id: '001',
-          imgUrl: 'http://img1.qunarzz.com/sight/source/1505/92/580e9ea4f37a1b.jpg_r_640x214_72112761.jpg',
-          title: '广州必游TOP10',
-          desc: '333条评论'
-        },
-        {
-          id: '002',
-          imgUrl: 'http://img1.qunarzz.com/sight/source/1505/92/580e9ea4f37a1b.jpg_r_640x214_72112761.jpg',
-          title: '广州长隆旅游度假区',
-          desc: '333条评论'
-        },
-        {
-          id: '003',
-          imgUrl: 'http://img1.qunarzz.com/sight/source/1505/92/580e9ea4f37a1b.jpg_r_640x214_72112761.jpg',
-          title: '广州长隆旅游度假区',
-          desc: '333条评论'
-        }
-      ]
-    }
+  props: {
+    'list': Array
   }
 }
 </script>
@@ -58,7 +37,7 @@ export default {
   .item-img-wrapper{
     height: 0
     overflow hidden
-    padding-bottom 33.9%
+    padding-bottom 37.09%
     .item-img{
       width: 100%
     }
