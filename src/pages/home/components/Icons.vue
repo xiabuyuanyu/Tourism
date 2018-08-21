@@ -1,12 +1,12 @@
 <template>
   <div class='icons'>
     <swiper>
-      <swiper-slide>
-        <div class='icon' v-for='item in iconList' :key='item.id'>
+      <swiper-slide v-for='(page, index) in pages' :key='index'>
+        <div class='icon' v-for='item in page' :key='item.id'>
           <div class='icon-img'>
             <img :src="item.iconUrl" alt="" class='icon-img-content'>
           </div>
-          <p class='icon-desc'>主题</p>
+          <p class='icon-desc'>{{item.desc}}</p>
         </div>
       </swiper-slide>
     </swiper>
@@ -58,11 +58,34 @@ export default {
           desc: '城市观光'
         },
         {
-          id: '007',
+          id: '008',
           iconUrl: 'http://img1.qunarzz.com/piao/fusion/1804/95/8d02011d149bdb02.png',
           desc: '汽车票'
+        },
+        {
+          id: '009',
+          iconUrl: 'http://img1.qunarzz.com/piao/fusion/1803/b1/528a9e80403b8c02.png',
+          desc: '玩转长隆'
+        },
+        {
+          id: '010',
+          iconUrl: 'http://img1.qunarzz.com/piao/fusion/1803/80/416c6ab3368d1f02.png',
+          desc: '全部玩水'
         }
       ]
+    }
+  },
+  computed: {
+    pages () {
+      const pages = []
+      this.iconList.forEach((item, index) => {
+        const page = Math.floor(index / 8)
+        if (!pages[page]) {
+          pages[page] = []
+        }
+        pages[page].push(item)
+      })
+      return pages
     }
   }
 }
