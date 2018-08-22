@@ -1,11 +1,6 @@
 <template>
   <ul class='list'>
-    <li>A</li>
-    <li>A</li>
-    <li>A</li>
-    <li>A</li>
-    <li>A</li>
-    <li>A</li>
+    <li v-for='(item, key) in cities' :key='key'>{{key}}</li>
   </ul>
 </template>
 
@@ -16,6 +11,9 @@ export default {
     return {
       name: []
     }
+  },
+  props: {
+    cities: Object
   }
 }
 </script>
@@ -26,7 +24,7 @@ export default {
     position: absolute
     right 0
     bottom 0
-    top -.4rem
+    top 1.6rem
     width .4rem
     display flex
     flex-direction column // 垂直居中
