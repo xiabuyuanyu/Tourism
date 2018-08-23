@@ -17,7 +17,7 @@
            </div>
          </div>
        </div>
-       <div class='area' v-for='(item, key) in cities' :key='key'>
+       <div class='area' v-for='(item, key) in cities' :key='key' :ref='key'>
          <div class='title border-topbottom'>{{key}}</div>
          <ul class='item-list'>
            <li class='border-bottom' v-for='itemCity in item' :key='itemCity.id'>{{itemCity.name}}</li>
@@ -31,17 +31,21 @@
 import BScroll from 'better-scroll'
 export default {
   name: 'CityList',
-  data () {
-    return {
-      name: []
-    }
-  },
   props: {
     cities: Object,
-    hot: Array
+    hot: Array,
+    letter: String
   },
   mounted () {
     this.scroll = new BScroll(this.$refs.wrapper)
+  },
+  watch: {
+    letter () {
+      if (this.letter) {
+        const element = this.$refs[this.letter][0]
+        this.scroll.scrollToElement(element)
+      }
+    }
   }
 }
 </script>
