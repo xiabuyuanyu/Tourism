@@ -58,11 +58,12 @@ export default {
     }
   },
   mounted () {
-    this.scroll = new BScroll(this.$refs.search)
+    this.scroll = new BScroll(this.$refs.search, {click: true})
   },
   methods: {
     handleCityClick (red) {
-
+      this.$store.commit('changeCity', red)
+      this.$router.push('/')
     }
   }
 }
