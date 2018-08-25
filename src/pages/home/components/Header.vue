@@ -3,7 +3,7 @@
     <div class='header-left'><span class='iconfont icon-fanhui'></span></div>
     <div class='header-input'><span class='iconfont icon-sousuo'></span>请输入城市\景点\游玩主题</div>
     <router-link to='/city'>
-      <div class='header-right'>{{this.$store.state.cities}}<span class='iconfont icon-xiaotuziCduan_'></span></div>
+      <div class='header-right'>{{this.$store.state.city}}<span class='iconfont icon-xiaotuziCduan_'></span></div>
     </router-link>
   </div>
 </template>

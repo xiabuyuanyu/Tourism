@@ -9,12 +9,7 @@
 
 <script>
 export default {
-  name: 'CityHeader',
-  data () {
-    return {
-      name: []
-    }
-  }
+  name: 'CityHeader'
 }
 </script>
 
