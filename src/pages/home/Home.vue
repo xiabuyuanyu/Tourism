@@ -43,7 +43,6 @@ export default {
         .then(this.getHomeInfoSucc)
     },
     getHomeInfoSucc (res) {
-      debugger
       res = res.data
       if (res.ret && res.data) {
         this.swiperList = res.data.swiperList
