@@ -38,11 +38,12 @@ export default {
     HomeWeekend
   },
   methods: {
-    getHomeinfo () {
+    getHomeInfo () {
       axios.get('/api/index.json?city=' + this.city)
         .then(this.getHomeInfoSucc)
     },
     getHomeInfoSucc (res) {
+      debugger
       res = res.data
       if (res.ret && res.data) {
         this.swiperList = res.data.swiperList
@@ -54,12 +55,12 @@ export default {
   },
   mounted () {
     this.lastCity = this.city
-    this.getHomeinfo()
+    this.getHomeInfo()
   },
   activated () {
     if (this.lastCity !== this.city) {
       this.lastCity = this.city
-      this.getHomeinfo()
+      this.getHomeInfo()
     }
   }
 }
