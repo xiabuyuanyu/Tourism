@@ -5,13 +5,16 @@
       <div class='banner-tittle'>大连亚圣旅游区</div>
       <div class='banner-number'><span class='iconfont icon-sousuo'></span>13{{showGallary}}</div>
     </div>
-    <common-gallary :imgs='imgs' v-show='showGallary' @close='handleGallaryClose'></common-gallary>
+    <fade-animation>
+      <common-gallary :imgs='imgs' v-show='showGallary' @close='handleGallaryClose'></common-gallary>
+    </fade-animation>
   </div>
 </template>
 
 <script>
 
 import CommonGallary from 'common/gallary/Gallary'
+import FadeAnimation from 'common/fade/FadeAnimation'
 export default {
   name: 'banner',
   data () {
@@ -21,7 +24,8 @@ export default {
     }
   },
   components: {
-    CommonGallary
+    CommonGallary,
+    FadeAnimation
   },
   methods: {
     handleBannerClick () {
